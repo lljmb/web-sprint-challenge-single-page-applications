@@ -16,7 +16,7 @@ function Order({ details }) {
       {
         !!details.toppings && !!details.toppings.length &&
         <div>
-          Hobbies:
+          toppings:
           <ul>
             {details.toppings.map((like, idx) => <li key={idx}>{like}</li>)}
           </ul>
