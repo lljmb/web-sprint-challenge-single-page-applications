@@ -1,6 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import { render } from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// Importing the top-level component
+import App from "./components/App";
+
+// Importing the styles
+import "./styles.less";
+
+
+render(
+  // Wrap the <App /> in a provider
+  <Router>
+    <App />
+  </Router>,
+  document.querySelector("#root")
+);
